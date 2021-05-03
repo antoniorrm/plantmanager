@@ -4,6 +4,10 @@ import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
 import Routes from "./src/routes";
 
+import * as Linking from "expo-linking";
+
+const prefix = Linking.createURL("/");
+
 export default function App() {
   const [fontsLoaded] = useFonts({
     Jost_400Regular,
@@ -14,5 +18,5 @@ export default function App() {
     return <AppLoading />;
   }
 
-  return <Routes />;
+  return <Routes prefix={prefix} />;
 }
