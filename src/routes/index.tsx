@@ -6,8 +6,6 @@ interface RouteProps {
   prefix: string;
 }
 const Routes = ({ prefix }: RouteProps) => {
-  console.log(prefix);
-
   const linking = {
     prefixes: [prefix],
     config: {
